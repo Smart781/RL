@@ -90,7 +90,7 @@ class SumoEnvironment(MultiAgentEnv):
         
     def reset(self):
         if self.run != 0:
-            self.save_csv(self.out_csv_name, self.run)
+            self.save_csv()
         self.run += 1
         self.metrics = []
 
@@ -284,7 +284,7 @@ class SumoEnvironment(MultiAgentEnv):
             value = value // self.radix_factors[i]
         return res
 
-    def save_csv(self, out_csv_name, run):
+    def save_csv(self, out_csv_name=self.out_csv_name, run=self.run):
         if out_csv_name is not None:
             df = pd.DataFrame(self.metrics)
             df.to_csv(out_csv_name + '_run{}'.format(run) + '.csv', index=False)
