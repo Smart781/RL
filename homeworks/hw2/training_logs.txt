@@ -1,0 +1,283 @@
+(venv_mac) ➜  Project mlagents-learn config/AmyImitation.yaml --run-id=doggy_train_v1 --force
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: AmyImitation?team=0
+[INFO] Hyperparameters for behavior name AmyImitation: 
+        trainer_type:   ppo
+        hyperparameters:
+          batch_size:   256
+          buffer_size:  4096
+          learning_rate:        0.0005
+          beta: 0.0005
+          epsilon:      0.2
+          lambd:        0.95
+          num_epoch:    3
+          shared_critic:        False
+          learning_rate_schedule:       constant
+          beta_schedule:        constant
+          epsilon_schedule:     constant
+        network_settings:
+          normalize:    True
+          hidden_units: 128
+          num_layers:   2
+          vis_encode_type:      simple
+          memory:       None
+          goal_conditioning_type:       hyper
+          deterministic:        False
+        reward_signals:
+          extrinsic:
+            gamma:      0.99
+            strength:   1.0
+            network_settings:
+              normalize:        False
+              hidden_units:     128
+              num_layers:       2
+              vis_encode_type:  simple
+              memory:   None
+              goal_conditioning_type:   hyper
+              deterministic:    False
+        init_path:      None
+        keep_checkpoints:       100
+        checkpoint_interval:    10000
+        max_steps:      500000
+        time_horizon:   64
+        summary_freq:   5000
+        threaded:       True
+        self_play:      None
+        behavioral_cloning:     None
+[INFO] AmyImitation. Step: 5000. Time Elapsed: 19.805 s. Mean Reward: 0.229. Std of Reward: 3.853. Training.
+[INFO] AmyImitation. Step: 10000. Time Elapsed: 35.571 s. Mean Reward: 0.967. Std of Reward: 3.885. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-9990.onnx
+[INFO] AmyImitation. Step: 15000. Time Elapsed: 51.444 s. Mean Reward: 0.494. Std of Reward: 3.620. Training.
+[INFO] AmyImitation. Step: 20000. Time Elapsed: 67.382 s. Mean Reward: 1.007. Std of Reward: 4.977. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-19962.onnx
+[INFO] AmyImitation. Step: 25000. Time Elapsed: 83.486 s. Mean Reward: 0.283. Std of Reward: 4.786. Training.
+[INFO] AmyImitation. Step: 30000. Time Elapsed: 99.257 s. Mean Reward: 0.966. Std of Reward: 3.799. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-29982.onnx
+[INFO] AmyImitation. Step: 35000. Time Elapsed: 114.951 s. Mean Reward: 1.176. Std of Reward: 5.309. Training.
+[INFO] AmyImitation. Step: 40000. Time Elapsed: 130.577 s. Mean Reward: 1.654. Std of Reward: 5.883. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-39988.onnx
+[INFO] AmyImitation. Step: 45000. Time Elapsed: 146.161 s. Mean Reward: 1.728. Std of Reward: 5.203. Training.
+[INFO] AmyImitation. Step: 50000. Time Elapsed: 162.376 s. Mean Reward: 1.279. Std of Reward: 5.794. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-49985.onnx
+[INFO] AmyImitation. Step: 55000. Time Elapsed: 178.110 s. Mean Reward: 1.417. Std of Reward: 4.772. Training.
+[INFO] AmyImitation. Step: 60000. Time Elapsed: 193.655 s. Mean Reward: 2.515. Std of Reward: 7.036. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-59946.onnx
+[INFO] AmyImitation. Step: 65000. Time Elapsed: 209.373 s. Mean Reward: 2.985. Std of Reward: 7.334. Training.
+[INFO] AmyImitation. Step: 70000. Time Elapsed: 225.462 s. Mean Reward: 5.198. Std of Reward: 9.208. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-69973.onnx
+[INFO] AmyImitation. Step: 75000. Time Elapsed: 241.273 s. Mean Reward: 1.956. Std of Reward: 6.114. Training.
+[INFO] AmyImitation. Step: 80000. Time Elapsed: 256.771 s. Mean Reward: 1.038. Std of Reward: 5.055. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-79942.onnx
+[INFO] AmyImitation. Step: 85000. Time Elapsed: 272.561 s. Mean Reward: 2.628. Std of Reward: 7.263. Training.
+[INFO] AmyImitation. Step: 90000. Time Elapsed: 288.034 s. Mean Reward: 3.314. Std of Reward: 6.895. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-89943.onnx
+[INFO] AmyImitation. Step: 95000. Time Elapsed: 304.227 s. Mean Reward: 3.081. Std of Reward: 7.360. Training.
+[INFO] AmyImitation. Step: 100000. Time Elapsed: 319.641 s. Mean Reward: 4.675. Std of Reward: 9.167. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-99954.onnx
+[INFO] AmyImitation. Step: 105000. Time Elapsed: 335.258 s. Mean Reward: 3.313. Std of Reward: 8.079. Training.
+[INFO] AmyImitation. Step: 110000. Time Elapsed: 350.815 s. Mean Reward: 2.689. Std of Reward: 6.640. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-109988.onnx
+[INFO] AmyImitation. Step: 115000. Time Elapsed: 366.520 s. Mean Reward: 6.825. Std of Reward: 8.794. Training.
+[WARNING] Restarting worker[0] after 'Communicator has exited.'
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+^C[INFO] Learning was interrupted. Please wait while the graph is generated.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-118487.onnx
+[INFO] Copied results/doggy_train_v1/AmyImitation/AmyImitation-118487.onnx to results/doggy_train_v1/AmyImitation.onnx.
+(venv_mac) ➜  Project mlagents-learn config/AmyImitation.yaml --run-id=doggy_train_v1 --resume 
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: AmyImitation?team=0
+[INFO] Hyperparameters for behavior name AmyImitation: 
+        trainer_type:   ppo
+        hyperparameters:
+          batch_size:   128
+          buffer_size:  2048
+          learning_rate:        0.0003
+          beta: 0.0005
+          epsilon:      0.2
+          lambd:        0.95
+          num_epoch:    3
+          shared_critic:        False
+          learning_rate_schedule:       constant
+          beta_schedule:        constant
+          epsilon_schedule:     constant
+        network_settings:
+          normalize:    True
+          hidden_units: 128
+          num_layers:   2
+          vis_encode_type:      simple
+          memory:       None
+          goal_conditioning_type:       hyper
+          deterministic:        False
+        reward_signals:
+          extrinsic:
+            gamma:      0.99
+            strength:   1.0
+            network_settings:
+              normalize:        False
+              hidden_units:     128
+              num_layers:       2
+              vis_encode_type:  simple
+              memory:   None
+              goal_conditioning_type:   hyper
+              deterministic:    False
+        init_path:      None
+        keep_checkpoints:       100
+        checkpoint_interval:    50000
+        max_steps:      1000000
+        time_horizon:   64
+        summary_freq:   15000
+        threaded:       True
+        self_play:      None
+        behavioral_cloning:     None
+[INFO] Resuming from results/doggy_train_v1/AmyImitation.
+[INFO] Resuming training from step 129981.
+[INFO] AmyImitation. Step: 135000. Time Elapsed: 54.133 s. Mean Reward: 5.841. Std of Reward: 9.817. Training.
+[WARNING] Restarting worker[0] after 'Communicator has exited.'
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: AmyImitation?team=0
+[ERROR] Worker 0 exceeded the allowed number of restarts.
+[INFO] Learning was interrupted. Please wait while the graph is generated.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-138073.onnx
+[INFO] Copied results/doggy_train_v1/AmyImitation/AmyImitation-138073.onnx to results/doggy_train_v1/AmyImitation.onnx.
+[ERROR] SubprocessEnvManager had workers that didn't signal shutdown
+(venv_mac) ➜  Project mlagents-learn config/AmyImitation.yaml --run-id=doggy_train_v1 --resume
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: AmyImitation?team=0
+[INFO] Hyperparameters for behavior name AmyImitation: 
+        trainer_type:   ppo
+        hyperparameters:
+          batch_size:   128
+          buffer_size:  2048
+          learning_rate:        0.0003
+          beta: 0.0005
+          epsilon:      0.2
+          lambd:        0.95
+          num_epoch:    3
+          shared_critic:        False
+          learning_rate_schedule:       constant
+          beta_schedule:        constant
+          epsilon_schedule:     constant
+        network_settings:
+          normalize:    True
+          hidden_units: 128
+          num_layers:   2
+          vis_encode_type:      simple
+          memory:       None
+          goal_conditioning_type:       hyper
+          deterministic:        False
+        reward_signals:
+          extrinsic:
+            gamma:      0.99
+            strength:   1.0
+            network_settings:
+              normalize:        False
+              hidden_units:     128
+              num_layers:       2
+              vis_encode_type:  simple
+              memory:   None
+              goal_conditioning_type:   hyper
+              deterministic:    False
+        init_path:      None
+        keep_checkpoints:       100
+        checkpoint_interval:    50000
+        max_steps:      1000000
+        time_horizon:   64
+        summary_freq:   15000
+        threaded:       True
+        self_play:      None
+        behavioral_cloning:     None
+[INFO] Resuming from results/doggy_train_v1/AmyImitation.
+[INFO] Resuming training from step 138073.
+[INFO] AmyImitation. Step: 150000. Time Elapsed: 82.573 s. Mean Reward: 7.984. Std of Reward: 11.066. Training.
+[INFO] Exported results/doggy_train_v1/AmyImitation/AmyImitation-149971.onnx
+[WARNING] Restarting worker[0] after 'Communicator has exited.'
+/Users/kirill/ml-agents-develop/Project/venv_mac/lib/python3.9/site-packages/mlagents/torch_utils/torch.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[INFO] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
+[INFO] Connected to Unity environment with package version 3.0.0-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: AmyImitation?team=0
+[INFO] AmyImitation. Step: 165000. Time Elapsed: 203.891 s. Mean Reward: 8.264. Std of Reward: 11.955. Training.
+[ERROR] Worker 0 exceeded the allowed number of restarts
